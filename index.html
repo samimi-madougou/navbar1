@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ma superbe navebar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+                <div class="logo">
+                    <a href="#">logo.S</a>
+                </div>
+                <ul class="liens">
+                    <li><a href="herro">accueil</a></li>
+                    <li><a href="about">média</a></li>
+                    <li><a href="media">à propos</a></li>
+                    <li><a href="contact">contacs</a></li>
+                </ul>
+                <div class="button">
+                    <a href="#" class="action-button pro">espace pro</a>
+                    <a href="#" class="action-button">se connecter</a>
+                </div>
+                <div class="burger">
+                    <i class="fa-solid fa-bars"></i>
+
+                </div>
+        </div>
+        <div class="burger-menu ">
+            <ul class="liens">
+                <li><a href="herro">accueil</a></li>
+                <li><a href="about">média</a></li>
+                <li><a href="media">à propos</a></li>
+                <li><a href="contact">contacs</a></li>
+                <div class="divider"></div>
+                <div class="button-burger-menu">
+                    <a href="#" class="action-button pro">espace pro</a>
+                    <a href="#" class="action-button">se connecter</a>
+                </div>
+            </ul>
+        </div>
+    </header>
+    <script>
+        const burgerButton = document.querySelector('.burger');
+        const burgerIcon = burgerButton.querySelector('i');
+        const burgerMenu = document.querySelector('.burger-menu');
+
+        burgerButton.onclick = function() {
+            burgerMenu.classList.toggle('open');
+            const isOpen = burgerMenu.classList.contains('open');
+            burgerIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+    };
+    </script>
+</body>
+</html>
